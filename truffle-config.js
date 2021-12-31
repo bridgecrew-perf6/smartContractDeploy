@@ -18,6 +18,13 @@ module.exports = {
       network_id: '3',
       gas: 4700000
     },
+    rinkeby: {
+      provider: function() {
+        return new HDWalletProvider(mnemonic, "https://rinkeby.infura.io/v3/"+projectiD);
+      },
+      network_id: '4',
+      gas: 4700000
+    },    
     bscTestnet: {
       provider: () => new HDWalletProvider(mnemonic, `https://data-seed-prebsc-1-s1.binance.org:8545`),
       network_id: 97,
